@@ -1,0 +1,22 @@
+@import "../../style/mixin.scss";
+
+.main-title {
+    margin-top: 3rem;
+    display: flex;
+}
+
+.main-films__container {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 50px;
+
+    @include _979 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.main-pagination {
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,45 @@
+@import "../../style/vars.scss";
+
+.button-group {
+    display: inline-block;
+    border: 1px solid $primary;
+    border-radius: 2rem;
+    margin-left: 2rem;
+
+    .button-change__category {
+        font-size: 1.2rem;
+        background: inherit;
+        color: $primary;
+        padding: .5rem 1.5rem;
+        border-radius: 2rem;
+        float: right;
+
+        &.active {
+            background: $primary;
+            color: $lightGreen;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+        }
+    }
+}
+
+.button-wrapper {
+    margin-left: 1.5rem;
+
+    .button__circle {
+        width: 3rem;
+        height: 3rem;
+        background: $primary;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+}

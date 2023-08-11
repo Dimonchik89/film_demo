@@ -1,0 +1,56 @@
+@import "./vars.scss";
+
+*,
+*:before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: inherit;
+}
+
+.color-white {
+    color: $white !important;
+}
+
+.bold {
+    font-weight: 700 !important;
+}
+
+.medium {
+    font-weight: 500 !important;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.flex {
+    display: flex;
+}
+
+.space-beteen {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

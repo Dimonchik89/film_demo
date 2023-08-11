@@ -1,0 +1,175 @@
+@import "../../style/vars.scss";
+
+.film-page {
+    margin-top: 64px;
+
+    .film-page__nav {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.find-link__style {
+    margin: 0 1rem !important;
+    color: $primary !important;
+}
+
+.film-page__intro {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    // height: 522px;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background: linear-gradient(to right, rgba(31, 31, 31, .9), rgba(31, 31, 31, .6));
+    }
+
+    .film-page__bg {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .film-page__content-wrapper {
+        position: relative;
+        z-index: 3;
+
+        .film-page__content {
+            padding: 2rem 0;
+            display: flex;
+
+            .film-page__poster {
+                height: 450px;
+                width: auto;
+            }
+
+            .film-page__intro-description {
+                flex: 1;
+                margin-left: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                color: $white;
+
+                .film-page__intro-title {
+                    font-weight: 700;
+                }
+
+                .film-page__intro-subtitle {
+                    margin-right: 3rem;
+                    position: relative;
+
+                    &:last-child::after {
+                        content: "";
+                        display: none;
+                    }
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 7px;
+                        height: 7px;
+                        background: $white;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%;
+                        right: -1.5rem;
+                        transform: translateY(-50%);
+                    }
+                }
+
+                .film-page__intro-raiting {
+                    width: 60px;
+                    height: 60px;
+                    background-color: #062C30;
+                    color: $white;
+                    border: 1px solid $gray;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.film-page__media {
+    margin-top: 3rem;
+    height: 462px;
+
+    .film-page__slider-wrapper {
+        min-height: 300px;
+    }
+
+    .film-page__media-slide {
+        height: auto;
+        max-height: 100%;
+        width: auto !important;
+    }
+}
+
+.film-page__recomend {
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    position: relative;
+    z-index: 2;
+
+    .film-recomend__wrapper {
+        display: inline-block;
+
+        .film-recomend__img-wrapper {
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+
+            &:hover .film-recomend__info {
+                visibility: visible;
+            }
+
+            .film-recomend__info {
+                position: absolute;
+                visibility: hidden;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                padding: .5rem;
+                background: rgba(255, 255, 255, .6);
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+.item-enter {
+    opacity: 0;
+}
+.item-enter-active {
+    opacity: 1;
+    transition: all 500ms ease-in;
+}
+.item-exit {
+    opacity: 1;
+    display: block;
+    transition: all 500ms ease-in;
+}
+.item-exit-active {
+    opacity: 0;
+    display: none;
+}
